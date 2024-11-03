@@ -1,0 +1,13 @@
+Package: hiworldR
+Type: Package
+Title: Hello world
+Version: 0.1.0
+Author: Amy Holt
+Maintainer: Amy Holt <ajholt@usf.edu>
+Description: Prints the standard "Hello, World" of first time programmers
+License: CCO
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
