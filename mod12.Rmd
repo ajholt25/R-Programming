@@ -1,0 +1,93 @@
+---
+title: lyricRipples
+author: "Amy Holt"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## This the early plan for functions for lyricRipple
+LyricRipples is an R package to analyze and compare lyrical themes 
+and sentiments across different generations of music artists. The project will 
+focus on identifying changes in themes, emotions, and word usage from Generation 
+X (1965–1980), Millennials (1981–1996), and Generation Z (1997–2012), revealing 
+insights into cultural and generational shifts.
+
+
+```{r}
+# load the packages
+#library(usethis)
+#library(devtools)
+#library(roxygen2)
+#library(testthat)
+#install.packages("geniusr","rvest", "stringr", "topicmodels")
+#library(geniusr)
+#library(rvest)
+#library(stringr)
+#library(tidytext)
+#library(topicmodels)
+#library(tm)
+#library(textdata)
+#library(ggplot2)
+#library(wordcloud2)
+#library(RColorBrewer)
+```
+
+## Lyric Scraping
+
+Lyrics will be scraped 
+
+```{r}
+lyrics <- function(artist){
+  # Code using API to retrieve lyrics
+}
+```
+
+## Sentiment Analysis
+Sentiment Scoring: Use tidytext with the either bing or nrc lexicons for 
+emotional tone analysis. Create a function to generate sentiment scores for 
+each lyric line or song. 
+```{r}
+
+analyze_sentiment <- function(lyrics) {
+    lyrics %>%
+    unnest_tokens(word, lyrics) %>%
+    inner_join(get_sentiments("nrc")) %>%
+    count(sentiment, sort = TRUE)
+}
+
+```
+
+## Word Frequency Analysis
+Generate term frequency distributions for each artist and generation, 
+filtering stop words and common words.
+
+
+```{r}
+word_freq <- function(lyrics) {
+    lyrics %>%
+    unnest_tokens(word, lyrics) %>%
+    anti_join(stop_words) %>%
+    count(word, sort = TRUE)
+}
+
+
+```
+
+## Topic Modeling
+```{r}
+## Insert code here
+```
+
+## Visualisation
+Sentiment Trend Plots: Use ggplot2 to create plots of sentiment scores.
+Theme Comparison Plots: Compare sentiment and thematic trends using bar and 
+line plots.
+Word Clouds: Use wordcloud2 to visualize prominent words for each generation.
+```{r}
+# Insert code here
+```
+
